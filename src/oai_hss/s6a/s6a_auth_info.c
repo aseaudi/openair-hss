@@ -298,7 +298,7 @@ s6a_auth_info_cb (
       /*
        * Generate authentication vector
        */
-      ComputeOPc (auth_info_resp.key, hss_config.operator_key_bin, auth_info_resp.opc);
+      //ComputeOPc (auth_info_resp.key, hss_config.operator_key_bin, auth_info_resp.opc);
       print_buffer ("opc      : ", auth_info_resp.opc, 16);
       generate_vector (auth_info_resp.opc, imsi, auth_info_resp.key, hdr->avp_value->os.data, sqn, &vector[i]);
     }

@@ -148,7 +148,7 @@ hss_config_init (
         abort ();
       }
 
-      hss_config_p->valid_op = 1;
+      //hss_config_p->valid_op = 1;
     }
   }
 
