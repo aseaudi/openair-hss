@@ -51,8 +51,8 @@ sqn_ms_derive (
   uint8_t                                 amf[2] = { 0, 0 };
   int                                     i = 0;
 
-  conc_sqn_ms = auts;
-  mac_s = &auts[6];
+  conc_sqn_ms = auts[16];
+  mac_s = &auts[22];
   sqn_ms = malloc (SQN_LENGTH_OCTEST);
   /*
    * if (hss_config.valid_opc == 0) {
@@ -71,6 +71,7 @@ sqn_ms_derive (
   print_buffer ("sqn_ms_derive() KEY    : ", key, 16);
   print_buffer ("sqn_ms_derive() RAND   : ", rand_p, 16);
   print_buffer ("sqn_ms_derive() AUTS   : ", auts, 14);
+  print_buffer ("sqn_ms_derive() SQN_MS_XOR_AK : ", conc_sqn_ms, 8);
   print_buffer ("sqn_ms_derive() AK     : ", ak, 6);
   print_buffer ("sqn_ms_derive() SQN_MS : ", sqn_ms, 6);
   print_buffer ("sqn_ms_derive() MAC_S  : ", mac_s, 8);
