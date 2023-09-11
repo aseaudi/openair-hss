@@ -261,9 +261,9 @@ s6a_up_loc_cb (
        * Padding is not zero'ed, may be the MME/SGSN supports newer
        * * * * release. Inform it.
        */
-      FPRINTF_ERROR ( "ULR flags ER_DIAMETER_INVALID_AVP_VALUE\n");
-      result_code = ER_DIAMETER_INVALID_AVP_VALUE;
-      goto out;
+      FPRINTF_ERROR ( "ULR flags ER_DIAMETER_INVALID_AVP_VALUE (PLEASE IGNORE THIS ERROR FOR NOW)\n");
+      //result_code = ER_DIAMETER_INVALID_AVP_VALUE;
+      //goto out;
     }
   } else {
     FPRINTF_ERROR ( "ULR flags ER_DIAMETER_MISSING_AVP\n");
